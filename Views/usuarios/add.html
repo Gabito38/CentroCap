@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<h2>Agregar Usuario</h2>
+<form method="post" action="{{ url_for('usuarios_controller.add')}}">
+  <div class="mb-3">
+    <label for="usuario" class="form-label">Usuario</label>
+    <input type="text" class="form-control" name="usuario" required>
+  </div>
+  <div class="mb-3">
+    <label for="correo" class="form-label">Correo</label>
+    <input type="email" class="form-control" name="correo" required>
+  </div>
+  <div class="mb-3">
+    <label for="celular" class="form-label">Celular</label>
+    <input type="text" class="form-control" name="celular" required>
+  </div>
+  <div class="mb-3">
+    <label for="contraseña" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" name="contraseña" required>
+  </div>
+  <div class="mb-3">
+    <label for="confirmar" class="form-label">Confirmar</label>
+    <input type="password" class="form-control" name="confirmar" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}
